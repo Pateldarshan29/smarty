@@ -6,6 +6,11 @@ const authorSchema = new Schema({
         type: String,
         required: true,
         unique: true
+    },
+    authorId:{
+        type: Number,
+        required: true,
+        unique: true
     }
 });
 

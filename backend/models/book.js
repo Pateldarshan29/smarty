@@ -2,16 +2,19 @@ const mongoose = require("mongoose");
 const {Schema} = mongoose;
 
 const bookSchema = new Schema({
-    bookId: {
-        type:String | Number,
-    },
     bookName: {
         type:String,
-        
+        required: true
     },
     ISBN: {
         type:String,
-        unique: true    
+        unique: true,
+        required : true    
+    },
+    authorId:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Author',
+        required: true      
     }
 });
 
